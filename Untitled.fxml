@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="548.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <AnchorPane prefHeight="589.0" prefWidth="703.0">
+         <children>
+            <TabPane prefHeight="520.5" prefWidth="703.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Home Tab">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button id="saveProfileButton" layoutX="304.0" layoutY="127.0" mnemonicParsing="false" text="Save Profile">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="loadProfileButton" layoutX="304.0" layoutY="230.0" mnemonicParsing="false" text="Load Profile">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button id="startButton" layoutX="304.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#startButtonPressed" prefHeight="29.0" prefWidth="95.0" text="Start Build">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Skills">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                            <AnchorPane id="startingSkillBox" maxHeight="-1.0" maxWidth="-1.0" prefHeight="489.0" prefWidth="703.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fx:id="craftingGoalLevel" fitHeight="439.0" fitWidth="306.0" layoutX="27.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../OSRS_Skills_Image_Blank.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="agilityGoalLevelBox" layoutX="187.0" layoutY="97.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="30">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="herbloreGoalLevelBox" layoutX="187.0" layoutY="147.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="30">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="craftingGoalLevelBox" layoutX="187.0" layoutY="250.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="fletchingGoalLevelBox" layoutX="187.0" layoutY="300.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="15">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="miningGoalLevelBox" layoutX="286.0" layoutY="45.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="60">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="firemakingGoalLevelBox" layoutX="286.0" layoutY="250.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="50">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="woodcuttingGoalLevelBox" layoutX="286.0" layoutY="300.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="cookingGoalLevelBox" layoutX="286.0" layoutY="198.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="fishingGoalLevel" layoutX="286.0" layoutY="147.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="prayerGoalLevelBox" layoutX="85.0" layoutY="250.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="43">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="magicGoalLevelBox" layoutX="85.0" layoutY="300.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="55">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="thievingGoalLevelBox" layoutX="187.0" layoutY="198.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="25">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="minTimeBettwenSkillsBoxminTimeBettwenSkillsBox" layoutX="485.0" layoutY="99.0" prefHeight="26.0" prefWidth="43.0" promptText="min" text="40" />
+                                    <TextField fx:id="maxTimeBetweenSkillsBoxmaxTimeBetweenSkillsBox" layoutX="546.0" layoutY="99.0" prefHeight="26.0" prefWidth="43.0" promptText="max" text="60" />
+                                    <Label layoutX="375.0" layoutY="103.0" text="Switch skill every:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="530.0" layoutY="103.0" text="to">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="593.0" layoutY="103.0" text="min ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="startingSkillDropDown" layoutX="374.0" layoutY="252.0" onAction="#skillSelected" prefHeight="26.0" prefWidth="164.0" promptText="Starting Skill" />
+                                    <TextField fx:id="minTimeBettwenSkillsBoxminTimeBettwenSkillsBox" layoutX="485.0" layoutY="149.0" prefHeight="26.0" prefWidth="43.0" text="420" />
+                                    <TextField id="maxTimeBetweenSkillsBox" fx:id="afkEveryMaximum" layoutX="546.0" layoutY="149.0" prefHeight="26.0" prefWidth="43.0" text="600" />
+                                    <Label layoutX="410.0" layoutY="153.0" text="AFK every:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="530.0" layoutY="153.0" text="to">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="593.0" layoutY="153.0" text="seconds">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="minTimeBettwenSkillsBox" fx:id="afkForMinimum" layoutX="485.0" layoutY="185.0" prefHeight="26.0" prefWidth="43.0" text="20" />
+                                    <TextField id="maxTimeBetweenSkillsBox" fx:id="afkForMaximum" layoutX="546.0" layoutY="185.0" prefHeight="26.0" prefWidth="43.0" text="120" />
+                                    <Label layoutX="425.0" layoutY="189.0" text="AFK for:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="530.0" layoutY="189.0" text="to">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="593.0" layoutY="189.0" text="seconds">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="smithingTargetLevelBox" fx:id="smithingGoalLevelBox" layoutX="286.0" layoutY="97.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="29">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="runecraftingGoalLevelBox" alignment="CENTER" layoutX="85.0" layoutY="351.0" prefHeight="30.0" prefWidth="35.0" promptText="99" text="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <CheckBox layoutX="377.0" layoutY="291.0" mnemonicParsing="false" text="Do Birdhouse runs when switching skills" />
+                                    <CheckBox layoutX="377.0" layoutY="321.0" mnemonicParsing="false" text="Do Herb runs when switching skills" />
+                                 </children>
+                            </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Preferences">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane id="startingSkillBox" layoutX="-4.0" layoutY="1.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="489.0" prefWidth="703.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="1.0">
+                                 <children>
+                                    <TextField id="minTimeBettwenSkillsBox" layoutX="134.0" layoutY="115.0" prefHeight="26.0" prefWidth="43.0" text="40" />
+                                    <TextField id="maxTimeBetweenSkillsBox" layoutX="202.0" layoutY="115.0" prefHeight="26.0" prefWidth="43.0" text="60" />
+                                    <Label layoutX="27.0" layoutY="119.0" text="Switch skill every:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="182.0" layoutY="119.0" text="to">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="249.0" layoutY="119.0" text="min ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="29.0" layoutY="56.0" prefHeight="26.0" prefWidth="216.0" promptText="Starting Skill" />
+                                    <TextField id="minTimeBettwenSkillsBox" layoutX="137.0" layoutY="165.0" prefHeight="26.0" prefWidth="43.0" text="420" />
+                                    <TextField id="maxTimeBetweenSkillsBox" layoutX="227.0" layoutY="164.0" prefHeight="26.0" prefWidth="43.0" text="600" />
+                                    <Label alignment="CENTER_RIGHT" layoutX="62.0" layoutY="168.0" text="AFK every:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="182.0" layoutY="169.0" text="s ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="274.0" layoutY="169.0" text="(SD)">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="minTimeBettwenSkillsBox" layoutX="137.0" layoutY="201.0" prefHeight="26.0" prefWidth="43.0" text="20" />
+                                    <TextField id="maxTimeBetweenSkillsBox" layoutX="227.0" layoutY="200.0" prefHeight="26.0" prefWidth="43.0" text="120" />
+                                    <Label alignment="CENTER_RIGHT" layoutX="76.0" layoutY="204.0" text="AFK for:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="182.0" layoutY="205.0" text="s">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="273.0" layoutY="204.0" text="(SD)">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="29.0" layoutY="259.0" mnemonicParsing="false" text="Do Birdhouse runs when switching skills" />
+                                    <CheckBox layoutX="29.0" layoutY="289.0" mnemonicParsing="false" text="Do Herb runs when switching skills" />
+                                    <Label layoutX="28.0" layoutY="24.0" text="Skill Preferences" underline="true">
+                                       <font>
+                                          <Font name="System Font" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="minTimeBettwenSkillsBox" fx:id="mouseSpeedBox" layoutX="445.0" layoutY="56.0" prefHeight="26.0" prefWidth="43.0" text="100" />
+                                    <Label layoutX="353.0" layoutY="60.0" text="Mouse Speed:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="207.0" layoutY="169.0" text="+/-">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="207.0" layoutY="205.0" text="+/-">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="352.0" layoutY="24.0" text="Misc Preferences" underline="true">
+                                       <font>
+                                          <Font name="System Font" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="minTimeBettwenSkillsBox" layoutX="553.0" layoutY="93.0" prefHeight="26.0" prefWidth="43.0" text="2" />
+                                    <Label layoutX="353.0" layoutY="97.0" text="World Hop if &gt;= x players in area:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="352.0" layoutY="141.0" text="ABC2 Modifier (% of max):">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Slider layoutX="526.0" layoutY="185.0" max="200.0" min="100.0" snapToTicks="true" value="150.0" />
+                                    <Label layoutX="352.0" layoutY="182.0" text="Drop Speed Modifier:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Slider layoutX="526.0" layoutY="141.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="25.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
