@@ -26,7 +26,7 @@ public class GUI extends Application {
     private final URL fxml;
     private final URL stylesheet;
 
-    private GUIController controller;
+    private GUIControllercSkiller controller;
 
     private Stage stage;
     private Scene scene;
@@ -118,6 +118,8 @@ public class GUI extends Application {
 
         FXMLLoader loader = new FXMLLoader(fxml);
 
+
+
         // By default FXMLLoader uses a different classloader, this caused issues with
         // upcasting
         loader.setClassLoader(this.getClass().getClassLoader());
@@ -126,10 +128,13 @@ public class GUI extends Application {
 
         controller = loader.getController();
 
+        if (controller == null) {
+            return;
+        }
+
         controller.setGUI(this);
 
         scene = new Scene(box);
-
 
         if (!this.decorated) {
             scene.setFill(Color.TRANSPARENT);
@@ -140,12 +145,13 @@ public class GUI extends Application {
 
         stage.setScene(scene);
 
+
         stage.setResizable(false);
 
     }
 
     @SuppressWarnings("unchecked")
-    public <T extends GUIController> T getController() {
+    public <T extends GUIControllercSkiller> T getController() {
 
         return (T) this.controller;
 
