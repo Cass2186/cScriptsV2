@@ -12,7 +12,6 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -92,11 +91,7 @@
                            <children>
                             <AnchorPane id="startingSkillBox" maxHeight="-1.0" maxWidth="-1.0" prefHeight="489.0" prefWidth="703.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <ImageView fitHeight="420.0" fitWidth="306.0" layoutX="29.0" layoutY="33.0">
-                                       <image>
-                                          <Image url="@../../../../../../../My%20Drive/OSRS_Skills_Image_Blank.png" />
-                                       </image>
-                                    </ImageView>
+                                    <ImageView fitHeight="420.0" fitWidth="306.0" layoutX="29.0" layoutY="33.0" />
                                     <TextField fx:id="agilityGoalLevelBox" alignment="CENTER" layoutX="187.0" layoutY="97.0" onAction="#updateSkillEndLevel" prefHeight="30.0" prefWidth="35.0" promptText="99" text="30">
                                        <font>
                                           <Font size="12.0" />
